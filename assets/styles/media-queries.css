@@ -1,0 +1,283 @@
+/* == HEADER E MENU == */
+
+@media screen and (max-width: 600px) {
+  header {
+    padding: 20px 30px;
+  }
+}
+
+@media screen and (max-width: 910px) {
+  .burger, .close-menu{
+    display: block;
+  }
+
+  .burger.active{
+    opacity: 0;
+  }
+  
+  .close-menu{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .close-menu svg{
+    transition: 300ms;
+  }
+
+  .close-menu svg:hover{
+    color: #909090;
+  }
+
+  .menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -500px;
+    width: 100%;
+    min-height: 100vh;
+    max-width: 280px;
+    background: var(--background-navbar);
+    padding: 50px 10px;
+    overflow: hidden;
+    transition: 500ms cubic-bezier(0, 0, .2, 1);
+  }
+
+  .menu.active{
+    right: 0;
+  }
+
+  header nav .navlinks {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 15% 0;
+    text-align: left;
+  }
+
+  header nav .navlinks a {
+    position: relative;
+    display: flex;
+    gap: 0.5em;
+    top: 20px;
+    font-size: 18px;
+    width: max-content;
+  }
+}
+
+/* == //HEADER E MENU == */
+
+
+/* == PRINCIPAL == */
+@media screen and (max-width: 1090px) {
+  .container .main {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .container .main {
+    padding: 6rem 1rem 2rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .main-content {
+    max-width: 100%;
+  }
+
+  .imageBox img {
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container .main .socials {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .main-content {
+    text-align: center;
+  }
+
+  .main-content h2 {
+    justify-content: center;
+  }
+
+  .main-content .buttons{
+    justify-content: center;
+  }
+
+  .imageBox img {
+    width: 240px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .main-content h2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 345px){
+  .main-content span{
+    white-space: pre-wrap;
+  }
+}
+
+/* == //PRINCIPAL == */
+
+
+/* == SOBRE MIM == */
+
+@media screen and (max-width: 1170px) {
+  .about-container {
+    padding: 8% 0;
+    gap: 1em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .about-content {
+    text-align: center;
+    margin: 0;
+  }
+
+  .about-content h2 {
+    font-size: 2.45em;
+  }
+
+  .about-image {
+    order: 1;
+  }
+
+  .about-image img {
+    max-width: 100%;
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-image img {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about-container {
+    padding: 15% 0;
+  }
+}
+
+/* == //SOBRE MIM == */
+
+
+/* == HABILIDADES == */
+
+@media screen and (max-width: 830px){
+  .skills .skills__container{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .skill__wrapper .skill__inner{
+    flex-wrap: wrap;
+  }
+}
+
+/* == //HABILIDADES == */
+
+/* == SERVIÇOS == */
+
+@media screen and (max-width: 768px){
+  .services .services__container{
+    flex-direction: column;
+  }
+
+  .service__card .service__card__icon{
+    margin: 0 auto;
+  }
+
+  .service__card .service__card__content{
+    text-align: center;
+  }
+
+  .service__card__title::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 3px);
+    width: 50px;
+    height: 2px;
+    background: #0073c6e0;
+  }
+
+  .service__card__title::after{
+    display: none;
+  }
+  
+  .service__card:hover .service__card__title::before{
+    background: var(--color-primary);
+  }
+}
+
+/* == //SERVIÇOS == */
+
+/* == PROJETOS == */
+
+@media screen and (max-width: 992px){
+  .projects__cards{
+    flex-direction: row;
+  }
+  .projects__cards .project__card{
+    flex-wrap: wrap;
+    max-width: 380px;
+  }
+  .project__card .project__image{
+    max-width: 100%;
+  }
+  .project__card .project__card__content{
+    padding: 2% 3% 4%;
+  }
+}
+
+@media screen and (max-width: 620px){
+  .projects__cards{
+    flex-direction: column;
+  }
+  .projects__cards .project__card{
+    max-width: 400px;
+  }
+}
+
+/* == //PROJETOS == */
+
+
+/* == EMAILS NO MODAL == */
+
+@media screen and (max-width: 992px){
+  .email-name{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+    margin: 0 0 20px;
+  }
+  
+  .email-name svg{
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* == //EMAILS NO MODAL == */

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+:root{
+    --color-primary: #f5f5f5;
+    --color-secondary: #000;
+
+    --font-primary: "Noto Sans", sans-serif;
+    --font-secondary: "Poppins", sans-serif;
+    --font-play: "Play", sans-serif;
+    --min-height: 100dvh;
+
+    --background-navbar: #4759E6;
+    
+    /* Principal conteúdo da apresentação */
+    --color-name-title: #11d75d;
+    --color-subtitle: #efefef;
+
+    --background-main: #071952;
+    --background-about: #24387d;
+    --background-skills: #faf9f6;
+    --background-services: #1e4eca;
+    --background-projects: #101010;
+
+    /* == Skills Cards & Projects Cards == */
+    --color-titles: #19485f;
+    --background-skill-course: #008277e1;
+
+    --background-cards-projects: #181818;
+    --bg-tags-filter-cards-projects: #273262;
+    --color-title-card: #f5f5f5;
+    --color-paragraph-card: #9e9e9e;
+    --color-project-icons: #9b9b9b;
+    --bg-button-view-project: #0a619f;
+    --bg-button-view-project-hover: #06365b;
+
+    --background-footer: #022E57;
+
+    --background-topo: #fff;
+    --background-topo-hover: #e0e0e0;
+    --color-icon-topo: #000;
+}
