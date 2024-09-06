@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/assets/styles/main.css" />
     <link rel="stylesheet" href="/assets/styles/root.css" />
     <link rel="stylesheet" href="/assets/styles/media-queries.css" />
+    <link rel="stylesheet" href="/assets/styles/modal.css" />
     <link rel="stylesheet" href="/assets/styles/tooltip.min.css" />
 </head>
 
@@ -31,7 +32,7 @@
             <div class="overlay" id="overlay"></div>
             <ul class="navlinks menu" id="menu">
                 <li>
-                    <a href="#inicio" class="active">
+                    <a href="#inicio" class="navlinks__link active">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
                             <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="2">
@@ -43,7 +44,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#sobre">
+                    <a href="#sobre" class="navlinks__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
                             <path
                                 d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
@@ -60,7 +61,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#habilidades">
+                    <a href="#habilidades" class="navlinks__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="none">
                             <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                                 <path
@@ -72,7 +73,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#servicos">
+                    <a href="#servicos" class="navlinks__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
                             <path d="M8.73047 21.499C10.0226 19.276 12.9819 19.0139 14.6673 20.7126C15.0441 21.0924 15.2325 21.2824 15.3996 21.3051C15.5667 21.3278 16.6152 20.7265 16.9874 20.5131C17.3668 20.2956 18.4187 19.6922 18.4848 19.5344C18.5509 19.3765 18.4817 19.1074 18.3433 18.5692C17.8399 16.6121 19.0606 14.5524 21.011 14.0212C21.5329 13.879 21.7938 13.8079 21.8969 13.672C22 13.5361 22 12.3409 22 11.9036C22 11.4664 22 10.2711 21.8969 10.1352C21.7938 9.9993 21.5329 9.92819 21.011 9.78607C19.0603 9.25481 17.8386 7.19517 18.3418 5.23798C18.4801 4.69968 18.5493 4.43053 18.4832 4.27271C18.4171 4.1149 17.3652 3.51159 16.9859 3.29406C16.6136 3.0806 15.5651 2.47932 15.3981 2.50204C15.231 2.52478 15.0426 2.71467 14.6657 3.09447C13.2064 4.56489 10.792 4.56495 9.33276 3.09456C8.95585 2.71477 8.76739 2.52487 8.60035 2.50215C8.4333 2.47942 7.38483 3.08071 7.0126 3.29418C6.63327 3.51172 5.58126 4.11501 5.51516 4.27285C5.44907 4.43069 5.51829 4.6998 5.65672 5.23805C6.16008 7.19518 4.9394 9.25477 2.98902 9.78605C2.46711 9.92819 2.20615 9.9993 2.10308 10.1353C2 10.2711 2 11.4664 2 11.9036C2 12.3409 2 13.5361 2.10308 13.6721C2.20617 13.808 2.467 13.879 2.98866 14.0211C2.99478 14.0228 3.00089 14.0245 3.007 14.0261" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                             <path d="M2.48891 18.1828C3.56891 17.1033 7.24091 13.4688 7.60091 13.0489C7.98148 12.6051 7.67291 12.0054 7.85651 10.1461C7.94535 9.24652 8.13895 8.57254 8.69291 8.071C9.35291 7.44726 9.89291 7.44726 11.7529 7.40527C13.3729 7.44726 13.5649 7.26733 13.7329 7.68716C13.8529 7.98704 13.4929 8.16696 13.0609 8.64677C12.1009 9.60637 11.5369 10.0862 11.4829 10.3861C11.0929 11.7055 12.6289 12.4852 13.4689 11.6455C13.7866 11.328 15.2569 9.84627 15.4009 9.72632C15.5089 9.63036 15.7674 9.635 15.8929 9.78629C16.0009 9.89235 16.0129 9.90624 16.0009 10.386C15.9898 10.8302 15.9948 11.4678 15.9961 12.1253C15.9979 12.9773 15.9529 13.9246 15.5929 14.4044C14.8729 15.4839 13.6729 15.5439 12.5929 15.5919C11.5729 15.6519 10.7329 15.5439 10.4689 15.7358C10.2529 15.8438 9.11291 17.0433 7.73291 18.4227L5.27291 20.8817C3.23291 22.5011 0.988911 19.9821 2.48891 18.1828Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
@@ -81,7 +82,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#projetos">
+                    <a href="#projetos" class="navlinks__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
                             <path
                                 d="M43 23V14C43 12.8954 42.1046 12 41 12H24L19 6H7C5.89543 6 5 6.89543 5 8V40C5 41.1046 5.89543 42 7 42H22"
@@ -95,11 +96,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#contatos">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56">
-                            <path fill="currentColor" d="M39.156 50.934c4.078 0 6.774-1.102 9.164-3.774c.188-.187.352-.398.54-.586c1.406-1.57 2.062-3.117 2.062-4.593c0-1.688-.984-3.258-3.07-4.712l-6.82-4.734c-2.11-1.453-4.571-1.617-6.54.328l-1.804 1.805c-.54.539-1.008.563-1.547.234c-1.242-.797-3.797-3.023-5.532-4.757c-1.828-1.805-3.609-3.82-4.523-5.297c-.328-.54-.281-.985.258-1.524l1.781-1.805c1.969-1.968 1.805-4.453.352-6.538l-4.758-6.82c-1.43-2.087-3-3.048-4.688-3.071c-1.476-.024-3.023.656-4.593 2.062c-.211.188-.399.352-.61.516c-2.648 2.39-3.75 5.086-3.75 9.14c0 6.704 4.125 14.86 11.696 22.43c7.523 7.524 15.703 11.696 22.382 11.696m.024-3.61c-5.977.117-13.64-4.476-19.711-10.523c-6.117-6.094-10.922-14.016-10.805-19.992c.047-2.579.938-4.805 2.79-6.399c.14-.14.28-.258.444-.375c.68-.61 1.454-.937 2.11-.937c.703 0 1.312.257 1.758.96l4.547 6.82c.492.727.539 1.548-.188 2.274l-2.062 2.063c-1.641 1.617-1.5 3.586-.328 5.156c1.335 1.805 3.656 4.43 5.437 6.211c1.805 1.805 4.64 4.336 6.445 5.695c1.57 1.172 3.563 1.29 5.18-.328l2.062-2.062c.727-.727 1.524-.68 2.25-.211l6.82 4.547c.704.468.985 1.054.985 1.758c0 .68-.328 1.43-.96 2.132a5.82 5.82 0 0 1-.352.446c-1.617 1.828-3.844 2.718-6.422 2.765"/>
-                        </svg>
-                        Contatos
+                    <a href="#contatos" class="btn__contact contact__menu">
+                        Contato
                     </a>
                 </li>
                 <div class="close-menu">
@@ -109,28 +107,22 @@
                     </svg>
                 </div>
             </ul>
+            <a href="#contatos" class="btn__contact">
+                Contato
+            </a>
         </nav>
     </header>
 
     <section class="container" id="inicio">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
         <div class="main">
             <div class="main-content">
                 <div class="socials">
                     <a href="https://www.linkedin.com/in/alexsandro-souza-4b6430284/" target="_blank" data-tooltip="Linkedin">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                             <path fill="currentColor" d="M116 3H12a8.91 8.91 0 0 0-9 8.8v104.42a8.91 8.91 0 0 0 9 8.78h104a8.93 8.93 0 0 0 9-8.81V11.77A8.93 8.93 0 0 0 116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1 1 10.49-10.5a10.5 10.5 0 0 1-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.instagram.com/alexsandrosouzajr/" target="_blank" data-tooltip="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
-                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                            <path
-                                d="M16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51472 16.5 7.5 14.4853 7.5 12C7.5 9.51472 9.51472 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12Z"
-                                stroke="currentColor" stroke-width="1.5" />
-                            <path d="M17.5078 6.5L17.4988 6.5" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </a>
                     <a href="https://api.whatsapp.com/send?phone=559888579109" target="_blank" data-tooltip="Whatsapp">
@@ -151,16 +143,11 @@
                     </a>
                 </div>
                 <h2>
-                    Olá, Eu sou <span class="type"></span>
+                    Olá, Eu sou Alexsandro
                 </h2>
+                <!-- <span class="type"></span> -->
 
-                <h4>Desenvolvedor Front-end</h4>
-
-                <p>
-                    Sou Alexsandro Fernandes Souza, trabalho na área de desenvolvedor Front-end, onde eu desenvolvo a
-                    interface gráfica de um site, cuidando desde do layout criado até os pequenos detalhes de menus,
-                    rodapé e entre outros, e a manutenção no site que é super importante.
-                </p>
+                <h4>Desenvolvedor front-end</h4>
 
                 <div class="buttons">
                     <a href="/assets/pdf/meu-currículo.pdf" download>
@@ -187,7 +174,12 @@
                     Sobre mim
                 </h2>
                 <p>
-                    Terminei o ensino médio técnico no IEMA - Gonçalves Dias na área Técnico de Informática para Internet, fiz um curso básico de office, e um curso de excel avançado. Meus hobbies são: Programar, Jogar Futebol, Jogar qualquer jogo que seja divertido, e Assistir filme.
+                    Sou Alexsandro Fernandes Souza, trabalho na área de desenvolvedor front-end, onde eu desenvolvo a
+                    interface gráfica de um site, cuidando desde do layout criado até os pequenos detalhes de menus,
+                    rodapé e entre outros, e a manutenção no site que é super importante.
+                </p>
+                <p>
+                    Iniciei na carreia de programação no IEMA, na área de Técnico de Informática para Internet, contudo participei do Trilhas Inova Maranhão 2024 e tenho o curso de excel avançado.
                 </p>
             </div>
         </div>
@@ -224,6 +216,38 @@
                             JavaScript
                         </h2>
                     </div>
+                    <div class="skill">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M439.6 236.1L244 40.5a28.9 28.9 0 0 0 -40.8 0l-40.7 40.6 51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.2 199v121.9c25.3 12.5 22.3 41.9 9.1 55a34.3 34.3 0 0 1 -48.6 0c-17.6-17.6-11.1-46.9 11.3-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1a28.9 28.9 0 0 0 0 40.8l195.6 195.6a28.9 28.9 0 0 0 40.8 0l194.7-194.7a28.9 28.9 0 0 0 0-40.8z"/>
+                        </svg>
+                        <h2 class="title__skill">
+                            Git
+                        </h2>
+                    </div>
+                    <div class="skill">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+                            <path fill="currentColor" d="M1.5 63.91v62.5h125v-125H1.5zm100.73-5a15.56 15.56 0 017.82 4.5 20.58 20.58 0 013 4c0 .16-5.4 3.81-8.69 5.85-.12.08-.6-.44-1.13-1.23a7.09 7.09 0 00-5.87-3.53c-3.79-.26-6.23 1.73-6.21 5a4.58 4.58 0 00.54 2.34c.83 1.73 2.38 2.76 7.24 4.86 8.95 3.85 12.78 6.39 15.16 10 2.66 4 3.25 10.46 1.45 15.24-2 5.2-6.9 8.73-13.83 9.9a38.32 38.32 0 01-9.52-.1 23 23 0 01-12.72-6.63c-1.15-1.27-3.39-4.58-3.25-4.82a9.34 9.34 0 011.15-.73L82 101l3.59-2.08.75 1.11a16.78 16.78 0 004.74 4.54c4 2.1 9.46 1.81 12.16-.62a5.43 5.43 0 00.69-6.92c-1-1.39-3-2.56-8.59-5-6.45-2.78-9.23-4.5-11.77-7.24a16.48 16.48 0 01-3.43-6.25 25 25 0 01-.22-8c1.33-6.23 6-10.58 12.82-11.87a31.66 31.66 0 019.49.26zm-29.34 5.24v5.12H56.66v46.23H45.15V69.26H28.88v-5a49.19 49.19 0 01.12-5.17C29.08 59 39 59 51 59h21.83z"/>
+                        </svg>
+                        <h2 class="title__skill">
+                            TypeScript
+                        </h2>
+                    </div>
+                    <div class="skill">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M224 508c-6.7 0-13.5-1.8-19.4-5.2l-61.7-36.5c-9.2-5.2-4.7-7-1.7-8 12.3-4.3 14.8-5.2 27.9-12.7 1.4-.8 3.2-.5 4.6 .4l47.4 28.1c1.7 1 4.1 1 5.7 0l184.7-106.6c1.7-1 2.8-3 2.8-5V149.3c0-2.1-1.1-4-2.9-5.1L226.8 37.7c-1.7-1-4-1-5.7 0L36.6 144.3c-1.8 1-2.9 3-2.9 5.1v213.1c0 2 1.1 4 2.9 4.9l50.6 29.2c27.5 13.7 44.3-2.4 44.3-18.7V167.5c0-3 2.4-5.3 5.4-5.3h23.4c2.9 0 5.4 2.3 5.4 5.3V378c0 36.6-20 57.6-54.7 57.6-10.7 0-19.1 0-42.5-11.6l-48.4-27.9C8.1 389.2 .7 376.3 .7 362.4V149.3c0-13.8 7.4-26.8 19.4-33.7L204.6 9c11.7-6.6 27.2-6.6 38.8 0l184.7 106.7c12 6.9 19.4 19.8 19.4 33.7v213.1c0 13.8-7.4 26.7-19.4 33.7L243.4 502.8c-5.9 3.4-12.6 5.2-19.4 5.2zm149.1-210.1c0-39.9-27-50.5-83.7-58-57.4-7.6-63.2-11.5-63.2-24.9 0-11.1 4.9-25.9 47.4-25.9 37.9 0 51.9 8.2 57.7 33.8 .5 2.4 2.7 4.2 5.2 4.2h24c1.5 0 2.9-.6 3.9-1.7s1.5-2.6 1.4-4.1c-3.7-44.1-33-64.6-92.2-64.6-52.7 0-84.1 22.2-84.1 59.5 0 40.4 31.3 51.6 81.8 56.6 60.5 5.9 65.2 14.8 65.2 26.7 0 20.6-16.6 29.4-55.5 29.4-48.9 0-59.6-12.3-63.2-36.6-.4-2.6-2.6-4.5-5.3-4.5h-23.9c-3 0-5.3 2.4-5.3 5.3 0 31.1 16.9 68.2 97.8 68.2 58.4-.1 92-23.2 92-63.4z"/>
+                        </svg>
+                        <h2 class="title__skill">
+                            Node
+                        </h2>
+                    </div>
+                    <div class="skill">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M2.85858 2.87732L15.4293 1.0815C15.7027 1.04245 15.9559 1.2324 15.995 1.50577C15.9983 1.52919 16 1.55282 16 1.57648V22.4235C16 22.6996 15.7761 22.9235 15.5 22.9235C15.4763 22.9235 15.4527 22.9218 15.4293 22.9184L2.85858 21.1226C2.36593 21.0522 2 20.6303 2 20.1327V3.86727C2 3.36962 2.36593 2.9477 2.85858 2.87732ZM17 2.99997H21C21.5523 2.99997 22 3.44769 22 3.99997V20C22 20.5523 21.5523 21 21 21H17V2.99997ZM10.2 12L13 7.99997H10.6L9 10.2857L7.39999 7.99997H5L7.8 12L5 16H7.39999L9 13.7143L10.6 16H13L10.2 12Z"></path>
+                        </svg>
+                        <h2 class="title__skill">
+                            Excel
+                        </h2>
+                    </div>
                 </div>
                 <h2 class="title__two">
                     Frameworks que utilizo
@@ -248,16 +272,15 @@
                                 Bootstrap
                             </h2>
                         </div>
+                        <div class="skill">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M418.2 177.2c-5.4-1.8-10.8-3.5-16.2-5.1 .9-3.7 1.7-7.4 2.5-11.1 12.3-59.6 4.2-107.5-23.1-123.3-26.3-15.1-69.2 .6-112.6 38.4-4.3 3.7-8.5 7.6-12.5 11.5-2.7-2.6-5.5-5.2-8.3-7.7-45.5-40.4-91.1-57.4-118.4-41.5-26.2 15.2-34 60.3-23 116.7 1.1 5.6 2.3 11.1 3.7 16.7-6.4 1.8-12.7 3.8-18.6 5.9C38.3 196.2 0 225.4 0 255.6c0 31.2 40.8 62.5 96.3 81.5 4.5 1.5 9 3 13.6 4.3-1.5 6-2.8 11.9-4 18-10.5 55.5-2.3 99.5 23.9 114.6 27 15.6 72.4-.4 116.6-39.1 3.5-3.1 7-6.3 10.5-9.7 4.4 4.3 9 8.4 13.6 12.4 42.8 36.8 85.1 51.7 111.2 36.6 27-15.6 35.8-62.9 24.4-120.5-.9-4.4-1.9-8.9-3-13.5 3.2-.9 6.3-1.9 9.4-2.9 57.7-19.1 99.5-50 99.5-81.7 0-30.3-39.4-59.7-93.8-78.4zM282.9 92.3c37.2-32.4 71.9-45.1 87.7-36 16.9 9.7 23.4 48.9 12.8 100.4-.7 3.4-1.4 6.7-2.3 10-22.2-5-44.7-8.6-67.3-10.6-13-18.6-27.2-36.4-42.6-53.1 3.9-3.7 7.7-7.2 11.7-10.7zM167.2 307.5c5.1 8.7 10.3 17.4 15.8 25.9-15.6-1.7-31.1-4.2-46.4-7.5 4.4-14.4 9.9-29.3 16.3-44.5 4.6 8.8 9.3 17.5 14.3 26.1zm-30.3-120.3c14.4-3.2 29.7-5.8 45.6-7.8-5.3 8.3-10.5 16.8-15.4 25.4-4.9 8.5-9.7 17.2-14.2 26-6.3-14.9-11.6-29.5-16-43.6zm27.4 68.9c6.6-13.8 13.8-27.3 21.4-40.6s15.8-26.2 24.4-38.9c15-1.1 30.3-1.7 45.9-1.7s31 .6 45.9 1.7c8.5 12.6 16.6 25.5 24.3 38.7s14.9 26.7 21.7 40.4c-6.7 13.8-13.9 27.4-21.6 40.8-7.6 13.3-15.7 26.2-24.2 39-14.9 1.1-30.4 1.6-46.1 1.6s-30.9-.5-45.6-1.4c-8.7-12.7-16.9-25.7-24.6-39s-14.8-26.8-21.5-40.6zm180.6 51.2c5.1-8.8 9.9-17.7 14.6-26.7 6.4 14.5 12 29.2 16.9 44.3-15.5 3.5-31.2 6.2-47 8 5.4-8.4 10.5-17 15.5-25.6zm14.4-76.5c-4.7-8.8-9.5-17.6-14.5-26.2-4.9-8.5-10-16.9-15.3-25.2 16.1 2 31.5 4.7 45.9 8-4.6 14.8-10 29.2-16.1 43.4zM256.2 118.3c10.5 11.4 20.4 23.4 29.6 35.8-19.8-.9-39.7-.9-59.5 0 9.8-12.9 19.9-24.9 29.9-35.8zM140.2 57c16.8-9.8 54.1 4.2 93.4 39 2.5 2.2 5 4.6 7.6 7-15.5 16.7-29.8 34.5-42.9 53.1-22.6 2-45 5.5-67.2 10.4-1.3-5.1-2.4-10.3-3.5-15.5-9.4-48.4-3.2-84.9 12.6-94zm-24.5 263.6c-4.2-1.2-8.3-2.5-12.4-3.9-21.3-6.7-45.5-17.3-63-31.2-10.1-7-16.9-17.8-18.8-29.9 0-18.3 31.6-41.7 77.2-57.6 5.7-2 11.5-3.8 17.3-5.5 6.8 21.7 15 43 24.5 63.6-9.6 20.9-17.9 42.5-24.8 64.5zm116.6 98c-16.5 15.1-35.6 27.1-56.4 35.3-11.1 5.3-23.9 5.8-35.3 1.3-15.9-9.2-22.5-44.5-13.5-92 1.1-5.6 2.3-11.2 3.7-16.7 22.4 4.8 45 8.1 67.9 9.8 13.2 18.7 27.7 36.6 43.2 53.4-3.2 3.1-6.4 6.1-9.6 8.9zm24.5-24.3c-10.2-11-20.4-23.2-30.3-36.3 9.6 .4 19.5 .6 29.5 .6 10.3 0 20.4-.2 30.4-.7-9.2 12.7-19.1 24.8-29.6 36.4zm130.7 30c-.9 12.2-6.9 23.6-16.5 31.3-15.9 9.2-49.8-2.8-86.4-34.2-4.2-3.6-8.4-7.5-12.7-11.5 15.3-16.9 29.4-34.8 42.2-53.6 22.9-1.9 45.7-5.4 68.2-10.5 1 4.1 1.9 8.2 2.7 12.2 4.9 21.6 5.7 44.1 2.5 66.3zm18.2-107.5c-2.8 .9-5.6 1.8-8.5 2.6-7-21.8-15.6-43.1-25.5-63.8 9.6-20.4 17.7-41.4 24.5-62.9 5.2 1.5 10.2 3.1 15 4.7 46.6 16 79.3 39.8 79.3 58 0 19.6-34.9 44.9-84.8 61.4zm-149.7-15c25.3 0 45.8-20.5 45.8-45.8s-20.5-45.8-45.8-45.8c-25.3 0-45.8 20.5-45.8 45.8s20.5 45.8 45.8 45.8z"/>
+                            </svg>
+                            <h2 class="title__skill">
+                                React
+                            </h2>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="course__box">
-                <h2 class="course__box__title">
-                    Meus cursos
-                </h2>
-                <div class="course__box__item">
-                    <img src="/assets/images/icons/excel.png" alt="Excel 2016" />
-                    <h2>Excel Avançado</h2>
                 </div>
             </div>
         </div>
@@ -305,95 +328,75 @@
     <section class="projects" id="projetos">
         <div class="box__text">
             <h2 class="heading">
-                Projetos dos desafios
+                Meus projetos
             </h2>
         </div>
         <div class="projects__cards">
             <div class="project__card">
                 <div class="project__image">
-                    <img src="/assets/images/projects/formulario-trilhas-inova.png" alt="Formulário Trilhas Inova Maranhão" />
+                    <img src="/assets/images/projects/paesdcasa.png" alt="Imagem - Pães d'Casa" />
                 </div>
                 <div class="project__card__content">
                     <h2 class="title__card">
-                        Formulário Trilhas Inova Maranhão
+                        Pães d'Casa
                     </h2>
                     <p class="paragraph__card">
-                        Tela login e cadastro foi feito com base no design no figma que disponibilizaram para que possamos contruir um formulário de login e de cadastro da Inova Maranhão com HTML, CSS e JavaScript.
+                        Pães d'Casa é um website que consite em produtos de vendas como: pães, bolos e salgados.
                     </p>
-                    <a href="https://formulario-trilhas-inova.vercel.app/" target="_blank" class="button__card">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-                            <path d="M20.9977 12.5032C20.9977 12.5032 21 12.0338 21 11.5029C21 7.02321 21 4.78334 19.6088 3.39167C18.2175 2 15.9783 2 11.5 2C7.02166 2 4.78249 2 3.39124 3.39167C2 4.78334 2 7.02321 2 11.5029C2 15.9827 2 18.2225 3.39124 19.6142C4.55785 20.7812 6.32067 20.9696 9.5 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                            <path d="M2 7H21" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                            <path d="M6 16H7M10 12H15M6 12H7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M17 18.5H17.009" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M21.772 18.0225C21.924 18.2357 22 18.3422 22 18.5C22 18.6578 21.924 18.7643 21.772 18.9775C21.089 19.9353 19.3446 22 17 22C14.6554 22 12.911 19.9353 12.228 18.9775C12.076 18.7643 12 18.6578 12 18.5C12 18.3422 12.076 18.2357 12.228 18.0225C12.911 17.0647 14.6554 15 17 15C19.3446 15 21.089 17.0647 21.772 18.0225Z" stroke="currentColor" stroke-width="1.5" />
-                        </svg>
+                    <a href="https://paesdcasa.vercel.app/" target="_blank" class="button__card">
                         <span>
                             Ver projeto
+                        </span>
+                        <span class="arrow-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                            </svg>
                         </span>
                     </a>
                 </div>
             </div>
             <div class="project__card">
                 <div class="project__image">
-                    <img src="/assets/images/projects/portfolio.png" alt="Portfolio pessoal" />
+                    <img src="/assets/images/projects/abelhaweb.png" alt="Imagem - AbelhaWeb" />
                 </div>
                 <div class="project__card__content">
                     <h2 class="title__card">
-                        Portfolio pessoal
+                        AbelhaWeb
                     </h2>
                     <p class="paragraph__card">
-                        Nesse desafio aprendi a fazer um portfolio, no qual posso colocar os projetos, habilidades e contatos, implementar a responsividade(mobile, tablet e desktop), além disso obtive o conhecimento de JavaScript para colocar em pratica o funcionamento do portfolio como menu de navegação e etc.
+                        A AbelhaWeb é um blog que consite passar as informações sobre os cuidados com as abelhas e a criação delas.
                     </p>
-                </div>
-            </div>
-            <div class="project__card">
-                <div class="project__image">
-                    <img src="/assets/images/projects/landing-page-Educação-Financeira.png" alt="Landing page - Pratica financeira" />
-                </div>
-                <div class="project__card__content">
-                    <h2 class="title__card">
-                        Landing page - Pratica financeira
-                    </h2>
-                    <p class="paragraph__card">
-                        A landing page foi feita em grupo com 15 pessoas de cada trilha (front-end, back-end, banco de dados, design e jogos).
-                        A landing page foi contruida com base no design do figma utilizando HTML, CSS e JavaScript.
-                    </p>
-                    <a href="https://landing-page-jogo-main.vercel.app/index.html" target="_blank" class="button__card">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-                            <path d="M20.9977 12.5032C20.9977 12.5032 21 12.0338 21 11.5029C21 7.02321 21 4.78334 19.6088 3.39167C18.2175 2 15.9783 2 11.5 2C7.02166 2 4.78249 2 3.39124 3.39167C2 4.78334 2 7.02321 2 11.5029C2 15.9827 2 18.2225 3.39124 19.6142C4.55785 20.7812 6.32067 20.9696 9.5 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                            <path d="M2 7H21" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                            <path d="M6 16H7M10 12H15M6 12H7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M17 18.5H17.009" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M21.772 18.0225C21.924 18.2357 22 18.3422 22 18.5C22 18.6578 21.924 18.7643 21.772 18.9775C21.089 19.9353 19.3446 22 17 22C14.6554 22 12.911 19.9353 12.228 18.9775C12.076 18.7643 12 18.6578 12 18.5C12 18.3422 12.076 18.2357 12.228 18.0225C12.911 17.0647 14.6554 15 17 15C19.3446 15 21.089 17.0647 21.772 18.0225Z" stroke="currentColor" stroke-width="1.5" />
-                        </svg>
+                    <a href="https://paesdcasa.vercel.app/" target="_blank" class="button__card">
                         <span>
                             Ver projeto
+                        </span>
+                        <span class="arrow-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                            </svg>
                         </span>
                     </a>
                 </div>
             </div>
             <div class="project__card">
                 <div class="project__image">
-                    <img src="/assets/images/projects/to-do-list.png" alt="To-Do-List" />
+                    <img src="/assets/images/projects/super-filmes.png" alt="Imagem - Super Filmes" />
                 </div>
                 <div class="project__card__content">
                     <h2 class="title__card">
-                        To-Do-List
+                        Super Filmes
                     </h2>
                     <p class="paragraph__card">
-                        O to-do-list foi feito em dupla, nesse desafio nós tivemos que implementar o to-do-list de acordo que estava no regulamento, meu amigo ja tinha uma ideía, então criamos com HTML, CSS, JavaScript, React e TyperScript.  
+                        Super Filmes é um website que tem um conteúdo de filmes e séries, em 4 categorias de filmes e 2 categorias de séries.
                     </p>
-                    <a href="https://to-do-list-trilhas.vercel.app/" target="_blank" class="button__card">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-                            <path d="M20.9977 12.5032C20.9977 12.5032 21 12.0338 21 11.5029C21 7.02321 21 4.78334 19.6088 3.39167C18.2175 2 15.9783 2 11.5 2C7.02166 2 4.78249 2 3.39124 3.39167C2 4.78334 2 7.02321 2 11.5029C2 15.9827 2 18.2225 3.39124 19.6142C4.55785 20.7812 6.32067 20.9696 9.5 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                            <path d="M2 7H21" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                            <path d="M6 16H7M10 12H15M6 12H7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M17 18.5H17.009" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M21.772 18.0225C21.924 18.2357 22 18.3422 22 18.5C22 18.6578 21.924 18.7643 21.772 18.9775C21.089 19.9353 19.3446 22 17 22C14.6554 22 12.911 19.9353 12.228 18.9775C12.076 18.7643 12 18.6578 12 18.5C12 18.3422 12.076 18.2357 12.228 18.0225C12.911 17.0647 14.6554 15 17 15C19.3446 15 21.089 17.0647 21.772 18.0225Z" stroke="currentColor" stroke-width="1.5" />
-                        </svg>
+                    <a href="https://super-filmes.vercel.app/" target="_blank" class="button__card">
                         <span>
                             Ver projeto
+                        </span>
+                        <span class="arrow-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                            </svg>
                         </span>
                     </a>
                 </div>
@@ -406,17 +409,16 @@
             Contatos
         </h1>
         <div class="contact__wrapper">
-            <div class="contact__card email-card" id="modal-open">
+            <div class="contact__card email-card" id="modal-email">
                 <div class="contact__card__icon email">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path fill="currentColor" fill-rule="evenodd" d="M14.95 3.684L8.637 8.912a1 1 0 0 1-1.276 0l-6.31-5.228A.999.999 0 0 0 1 4v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a.999.999 0 0 0-.05-.316M2 2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m-.21 1l5.576 4.603a1 1 0 0 0 1.27.003L14.268 3z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
                     </svg>
                 </div>
                 <h2 class="contact__card__title">
                     E-mail
                 </h2>
             </div>
-            <div class="contact__card whatsapp-card">
+            <div class="contact__card">
                 <a href="https://api.whatsapp.com/send?phone=559888579109" target="_blank">
                     <div class="contact__card__icon whatsapp">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -428,7 +430,7 @@
                     </h2>
                 </a>
             </div>
-            <div class="contact__card linkedin-card">
+            <div class="contact__card">
                 <a href="https://www.linkedin.com/in/alexsandro-souza-4b6430284/" target="_blank">
                     <div class="contact__card__icon linkedin">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -440,7 +442,7 @@
                     </h2>
                 </a>
             </div>
-            <div class="contact__card github-card">
+            <div class="contact__card">
                 <a href="https://github.com/alexsouzajunior" target="_blank">
                     <div class="contact__card__icon github">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432 416">
@@ -493,7 +495,7 @@
         </svg>
     </button>
 
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> -->
     <script src="/assets/scripts/main.js"></script>
 </body>
 

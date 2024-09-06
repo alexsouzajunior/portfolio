@@ -7,10 +7,12 @@ const sections = document.querySelectorAll('section');
 const filterBtn = document.querySelectorAll('.btn-filter');
 const filterProjects = document.querySelectorAll('.projects__cards .project__card');
 const topo = document.querySelector('.topo');
-const openModal = document.getElementById('modal-open');
+const openModal = document.getElementById('modal-email');
 const modal = document.querySelector('.modal');
 const closeModal = document.querySelector('.closeModal');
 const overlayModal = document.getElementById('overlay-modal')
+const contactCardEmail = document.querySelector('.email')
+const contactCardEmailIcon = document.querySelector('.email svg')
 
 burger.addEventListener("click", () => {
     burger.classList.toggle("active");
@@ -46,11 +48,11 @@ window.addEventListener("scroll", function () {
     }
 });
 
-var typed = new Typed(".type", {
-    strings: ["Alexsandro", "Front-end developer", "Alexsandro"],
-    typeSpeed: 70,
-    backSpeed: 70,
-});
+// var typed = new Typed(".type", {
+//     strings: ["Alexsandro"],
+//     typeSpeed: 70,
+//     backSpeed: 70,
+// });
 
 this.onscroll = () => {
     sections.forEach(sec => {
@@ -75,7 +77,7 @@ topo.addEventListener('click', () => {
 window.addEventListener('scroll', function() {topScroll()})
 
 function topScroll() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100){
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 250){
         topo.classList.add('mostrarTopo');
     }else {
         topo.classList.remove('mostrarTopo');
@@ -85,9 +87,13 @@ function topScroll() {
 openModal.addEventListener('click', () => {
     modal.classList.add('showModal');
     overlayModal.classList.add('showOverlay');
+    contactCardEmail.classList.add('active');
+    contactCardEmailIcon.classList.add('active');
 });
 
 closeModal.addEventListener('click', () => {
     modal.classList.remove('showModal');
     overlayModal.classList.remove('showOverlay');
+    contactCardEmail.classList.remove('active')
+    contactCardEmailIcon.classList.remove('active')
 });
