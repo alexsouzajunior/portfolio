@@ -2,7 +2,7 @@
 
 @media screen and (max-width: 600px) {
   header {
-    padding: 20px 30px;
+    padding: 15px 20px;
   }
 }
 
@@ -10,6 +10,7 @@
   .burger, .close-menu{
     display: block;
   }
+  
 
   .burger.active{
     opacity: 0;
@@ -74,8 +75,9 @@
   header nav .btn__contact{
     display: none;
   }
-  header nav .navlinks .contact__menu{
+  header nav .navlinks .btn__contact__menu{
     display: block;
+    margin-top: 15px;
   }
 }
 
