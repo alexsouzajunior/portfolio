@@ -10,59 +10,62 @@ html {
   scroll-behavior: smooth;
 }
 
+body{
+  background: var(--background-body);
+  transition: .35s;
+}
+
+body.darkmode{
+  background: var(--background-body);
+}
+
 header {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 1rem 20px;
+  padding: .85rem 20px;
+  transition: .35s;
   z-index: 10;
-  background: transparent;
-  transition: 400ms ease;
 }
 
 header.sticky {
   background: var(--background-navbar);
-  box-shadow: rgba(0, 0, 0, 0.15) 0 4px 3px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0 4px 3px;
 }
 
 header.sticky .name, 
 header.sticky .navlinks .navlinks__link{
-  color: var(--color-secondary);
+  color: var(--color-navlinks);
 }
 
 header.sticky .navlinks .navlinks__link::before{
-  background: var(--color-secondary);
+  background: var(--color-navlinks-border);
 }
 
-header.sticky .btn__contact{
-  background: #069ecc;
-  border: 1px solid #069ecc;
-  color: #fff !important;
+header.sticky .darkmode__icons .sun{
+  color: var(--color-sun-icon);
 }
 
-header.sticky .btn__contact:hover{
-  color: var(--color-secondary) !important;
+header.sticky .darkmode__icons .moon{
+  color: var(--color-moon-icon);
 }
 
 header.sticky .burger{
-  color: var(--color-secondary);
+  color: var(--color-burger);
 }
 
 header nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   transition: .2s ease-in;
 }
 
 header nav .name{
-  display: flex;
-  flex: 1;
-  color: var(--color-primary);
+  color: var(--color-name);
   font-family: var(--font-play);
   font-weight: 400;
   font-size: 1.58rem;
-  z-index: -1;
 }
 
 header nav .navlinks {
@@ -75,7 +78,7 @@ header nav .navlinks .navlinks__link {
   display: flex;
   align-items: center;
   gap: 5px;
-  color: var(--color-primary);
+  color: var(--color-navlinks);
   font-family: var(--font-secondary);
   font-weight: 400;
   font-size: 1em;
@@ -87,14 +90,16 @@ header nav .navlinks .navlinks__link::before {
   top: 100%;
   left: 0;
   width: 100%;
-  scale: 0;
+  transform: scaleX(0);
+  transform-origin: right;
   height: 2px;
-  background: var(--color-primary);
-  transition: 0.5s;
+  background: var(--color-navlinks-border);
+  transition: transform 0.5s;
 }
 
 header nav .navlinks .navlinks__link:is(.active, :hover)::before {
-  scale: 1;
+  transform-origin: left;
+  transform: scaleX(1);
 }
 
 header nav .navlinks a svg {
@@ -102,39 +107,95 @@ header nav .navlinks a svg {
   height: 18px;
 }
 
-header nav .navlinks .btn__contact__menu{
-  display: none;
+header nav .navbar__right{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  right: 25px;
 }
 
 header nav .btn__contact{
-  border: 1px solid var(--color-primary);
-  background: var(--color-primary);
-  padding: 5px 20px;
+  border: 1px solid var(--background-navbar-button);
+  background: transparent;
+  padding: 0 18px;
+  height: 35px;
+  display: flex;
+  align-items: center;
   border-radius: 50px;
-  color: var(--color-secondary) !important;
+  color: var(--color-text-navbar-button) !important;
   font-family: var(--font-secondary);
   font-weight: 400;
+  box-shadow: rgba(63, 63, 63, 0.178) 0 1px 4px;
   transition: 400ms ease;
   
   &:hover{
-    background: transparent;
+    background: var(--background-navbar-button);
+    color: var(--color-text-button-hover) !important;
+    box-shadow: none;
   }
 }
 
 header nav .navlinks .btn__contact__menu{
-  background: #069ecc;
-  border: 1px solid #069ecc;
-  padding: 5px 20px;
+  border: 1px solid var(--background-navbar-button);
+  background: transparent;
+  padding: 0 18px;
+  height: 35px;
   border-radius: 50px;
-  color: var(--color-primary) !important;
+  color: var(--color-text-navbar-button) !important;
   font-family: var(--font-secondary);
   font-weight: 400;
   transition: 400ms ease;
 
   &:hover{
-    background: transparent;
-    color: var(--color-secondary) !important;
+    background: var(--background-navbar-button);
   }
+}
+
+header nav .navlinks .btn__contact__list{
+  display: none;
+}
+
+.darkmode__btn .darkmode__icons{
+  display: flex;
+  align-items: center;
+}
+
+.darkmode__icons svg{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.darkmode__icons .sun{
+  opacity: 1;
+  visibility: visible;
+  scale: 1;
+  color: var(--color-sun-icon);
+  transition: .5s ease-in-out;
+}
+
+.darkmode__icons .moon{
+  opacity: 0;
+  visibility: hidden;
+  scale: 0;
+  color: var(--color-moon-icon);
+  transition: .5s ease-in-out;
+}
+
+.darkmode__icons .sun.active{
+  opacity: 0;
+  visibility: hidden;
+  scale: 0;
+}
+
+.darkmode__icons .moon.active{
+  opacity: 1;
+  visibility: visible;
+  scale: 1;
 }
 
 .burger, .close-menu{
@@ -142,28 +203,15 @@ header nav .navlinks .btn__contact__menu{
   cursor: pointer;
   width: 28px;
   height: 28px;
-  color: #fff;
+  color: var(--color-burger);
 }
 
 .overlay{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: #000016e1;
-  visibility: hidden;
-  opacity: 0;
-  z-index: -1;
-  transition: 300ms cubic-bezier(.25, .46, .45, .94);
-}
-
-.overlay.active{
-  visibility: visible;
-  opacity: 1;
+  display: none;
 }
 
 .container {
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
@@ -173,6 +221,7 @@ header nav .navlinks .btn__contact__menu{
   background-size: cover;
   background-position: center;
   overflow: hidden;
+  transition: background .35s;
 }
 
 .container .main {
@@ -196,7 +245,7 @@ header nav .navlinks .btn__contact__menu{
 .container .socials svg {
   width: 28px;
   height: 28px;
-  color: var(--color-primary);
+  color: var(--color-icons-socials);
 }
 
 .main-content {
@@ -208,15 +257,10 @@ header nav .navlinks .btn__contact__menu{
 }
 
 .main-content h2 {
-  color: var(--color-primary);
+  color: var(--color-title);
   font-size: 2.45rem;
   font-weight: 500;
   letter-spacing: 1px;
-}
-
-.main-content span{
-    color: var(--color-name-title);
-    white-space: nowrap;
 }
 
 .main-content h4 {
@@ -226,22 +270,15 @@ header nav .navlinks .btn__contact__menu{
   font-weight: 400;
 }
 
-.main-content p {
-  color: var(--color-primary);
-  font-weight: 300;
-  font-size: 1rem;
-  font-family: var(--font-primary);
-}
-
 .main-content .buttons{
   display: flex;
   gap: 1rem;
 }
 
 .buttons a{
-  background: #fff;
-  border: 1px solid #fff;
-  color: var(--color-secondary);
+  background: transparent;
+  border: 1px solid var(--color-button-main);
+  color: var(--color-txt-button);
   padding: 8px 15px;
   border-radius: 5px;
   margin-top: 20px;
@@ -254,11 +291,12 @@ header nav .navlinks .btn__contact__menu{
   background: linear-gradient(to left, #f4119e, #f0073b);
   color: var(--color-primary);
   border: none;
+  box-shadow: none;
 }
 
 .buttons a:hover{
-  background: transparent;
-  color: var(--color-primary);
+  background: var(--color-button-main);
+  color: var(--color-txt-button-hover);
 }
 
 .buttons :is(a:nth-child(1)):hover{
@@ -268,7 +306,7 @@ header nav .navlinks .btn__contact__menu{
 
 .imageBox img {
   max-width: 100%;
-  width: 320px;
+  width: 310px;
   height: auto;
   display: block;
   margin: auto;
@@ -281,65 +319,48 @@ header nav .navlinks .btn__contact__menu{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 11%;
-  min-height: var(--min-height);
-  background: var(--background-about);
+  padding: 6rem 1rem;
 }
 
 .about-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  max-width: 75em;
-  width: 100%;
-  margin: auto;
 }
 
 .about-content {
-  max-width: 515px;
-  margin: 1em;
+  max-width: 715px;
+  margin: 1rem auto;
   line-height: 1.5;
   font-family: var(--font-secondary);
+  text-align: center;
 }
 
 .about-content h2 {
   position: relative;
-  color: var(--color-primary);
+  color: var(--color-about-title);
   font-size: 2.8rem;
   font-weight: 400;
-  margin-bottom: 20px;
+  margin-bottom: 45px;
 }
 
 .about-content h2::before{
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translate(-50%);
   width: 15%;
   height: 2px;
-  background: var(--color-primary);
+  background: var(--color-about-border-title);
 }
 
 .about-content p {
   margin: 0 0 15px;
   font-size: 1rem;
   font-weight: 400;
-  color: var(--color-primary);
+  color: var(--color-about-paragraph);
   font-family: var(--font-primary);
-}
-
-.about-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-image img {
-  width: 300px;
-  height: auto;
-  -o-object-fit: cover;
-  object-fit: cover;
-  pointer-events: none;
 }
 
 .skills {
@@ -347,10 +368,7 @@ header nav .navlinks .btn__contact__menu{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: var(--background-skills);
-  min-height: var(--min-height);
-  padding: 30px 0 30px;
-  padding-top: 50px;
+  padding: 4rem 10px 30px;
 }
 
 .skills .skills__title {
@@ -368,7 +386,7 @@ header nav .navlinks .btn__contact__menu{
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 6px);
-  background: #19485f;
+  background: var(--background-border-title-skills);
   width: 50%;
   height: 2px;
 }
@@ -407,10 +425,10 @@ header nav .navlinks .btn__contact__menu{
   border-radius: 10px;
   margin-bottom: 2rem;
   transition: 300ms;
-}
 
-.skill__inner .skill:hover{
-  scale: 1.08;
+  &:hover{
+    scale: 1.08;
+  }
 }
 
 .skill svg{
@@ -433,156 +451,27 @@ header nav .navlinks .btn__contact__menu{
   font-weight: 400;
 }
 
-.services{
-  background: var(--background-services);
-  padding: 10% 5% 10%;
-  font-family: var(--font-primary);
-}
-
-.services .services__heading{
-  color: var(--color-primary);
-  font-size: 2.25rem;
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.services .paragraph{
-  color: var(--color-primary);
-  font-size: 1rem;
-  font-weight: 400;
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-.services .services__container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  gap: 1rem;
-  width: 100%;
-  height: 100%;
-}
-
-.services__container .service__card{
-  background: #fafafa;
-  color: var(--color-secondary);
-  padding: 1rem;
-  max-width: 600px;
-  border-radius: 10px;
-  position: relative;
-
-}
-
-.service__card .service__card__icon{
-  background: #0098e4;
-  display: flex;
-  width: max-content;
-  border-radius: 5px;
-  padding: .25rem;
-  margin-bottom: 5px;
-  position: relative;
-  z-index: 1;
-}
-
-.service__card::after{
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  background: #0098e4;
-  border-radius: 10px;
-  visibility: hidden;
-  transition: 400ms ease-in-out;
-}
-
-.service__card:hover::after{
-  height: 100%;
-  visibility: visible;
-}
-
-.service__card__icon svg{
-  width: 35px;
-  height: 35px;
-  color: #fff;
-}
-
-.service__card__icon img{
-  width: 35px;
-  height: 35px;
-  filter: invert(1);
-  pointer-events: none;
-}
-
-.service__card .service__card__content{
-  line-height: 1.5;
-  position: relative;
-  z-index: 1;
-}
-
-.service__card:hover .service__card__title{
-  color: var(--color-primary);
-}
-
-.service__card:hover .service__card__title::after{
-  background: var(--color-primary);
-}
-
-.service__card:hover .service__card__paragraph{
-  color: var(--color-primary);
-}
-
-.service__card__content .service__card__title{
-  position: relative;
-  font-size: 1.45rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.service__card__title::after{
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 2px;
-  transform: translate(0, 2px);
-  width: 50px;
-  height: 2px;
-  background: #0098e4;
-}
-
-.service__card__content .service__card__paragraph{
-  font-size: 1rem;
-  color: #454545;
-}
-
 .projects{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background: var(--background-projects);
-  min-height: var(--min-height);
   width: 100%;
+  padding: 4rem 1rem;
 }
 
 .box__text{
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   width: 100%;
-  padding: 2.5rem 0 1.5rem;
+  padding: 1rem 0 1.5rem;
 }
 
 .projects .heading{
   position: relative;
-  color: var(--color-secondary);
+  color: var(--color-heading);
   font-family: var(--font-primary);
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.5;
+  text-align: center;
 }
 
 .projects .heading::after{
@@ -593,36 +482,12 @@ header nav .navlinks .btn__contact__menu{
   width: 50%;
   transform: translate(-50%, 6px);
   height: 2px;
-  background: var(--color-secondary);
+  background: var(--color-border-heading);
   border-radius: 50px;
 }
 
-.projects__cards{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  max-width: 75rem;
-  margin: 0 auto;
-  padding: 3rem 1rem 3rem;
-}
-
-.projects__cards .project__card{
-  width: 100%;
-  max-width: 350px;
-  background: var(--background-cards-projects);
-  box-shadow: rgba(223, 223, 223, 0.1) 0 6px 12px -2px, rgba(0, 0, 0, 0.20) 0 3px 7px -3px;
-  border-radius: 6px;
-  transition: 300ms ease-in;
-}
-
 .project__image{
-  display: flex;
-  flex-direction: column;
-  position: relative;
   width: 100%;
-  max-width: 500px;
   height: auto;
   overflow: hidden;
 }
@@ -640,42 +505,40 @@ header nav .navlinks .btn__contact__menu{
 }
 
 .project__card .project__card__content{
-  position: relative;
-  max-width: 500px;
-  padding: 2% 2% 3%;
+  padding: 1%;
   line-height: 1.5;
   font-family: var(--font-primary);
-  text-align: left;
+  text-align: center;
 }
 
 .project__card__content .title__card{
-  font-size: 1.15rem;
+  position: relative;
+  font-size: 1.25rem;
   font-weight: 500;
   color: var(--color-title-card);
-  position: relative;
-  margin-bottom: 20px;
 }
 
 .project__card .title__card::after{
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
-  transform: translate(0, 4px);
+  left: 50%;
+  transform: translate(-50%, 4px);
   background: #0199da;
-  width: 5%;
+  width: 10%;
   height: 2px;
   transition: 400ms ease-in-out;
 }
 
 .project__card:hover .title__card::after{
-  width: 10%;
+  width: 15%;
 }
 
 .project__card__content .paragraph__card{
-  font-size: 1rem;
+  margin-top: 10px;
+  font-size: .95rem;
   color: var(--color-paragraph-card);
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .button__card{
@@ -683,14 +546,25 @@ header nav .navlinks .btn__contact__menu{
   align-items: center;
   position: relative;
   width: max-content;
+  margin: auto;
   font-size: 1rem;
   font-weight: 400;
-  background: #017f7f;
-  color: var(--color-primary);
-  padding: 1.5% 3%;
-  border-radius: 4px;
+  background: var(--background-button-card);
+  color: var(--color-text-button-card);
+  padding: 1.85% 8%;
+  margin-bottom: 15px;
+  border-radius: 6px;
   transition: 400ms ease-in-out;
   position: relative;
+
+  &:hover{
+    background: transparent;
+    color: var(--color-button-hover);
+  }
+
+  &:hover::before{
+    scale: 1;
+  }
 }
 
 .button__card::before{
@@ -700,35 +574,84 @@ header nav .navlinks .btn__contact__menu{
   left: 0;
   width: 100%;
   height: 2px;
-  background: #202020;
+  background: var(--background-button-border);
   scale: 0;
   transition: 400ms ease-in-out;
 }
 
-.button__card:hover{
-  background: transparent;
-  color: var(--color-secondary);
+.carousel-projects{
+  width: 100%;
+  height: 480px;
+  max-width: 1200px;
 }
 
-.button__card:hover::before{
-  scale: 1;
+.swiper .swiper-slide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.button__card span{
-  font-size: 1rem;
-  font-weight: 400;
+.swiper .swiper-slide .project__card{
+  width: 350px;
+  background: var(--background-cards-projects);
+  box-shadow: var(--shadow-card);
+  border-radius: 6px;
+  transition: .35s;
+}
+
+.carousel-arrows{
+  display: flex;
+  position: absolute;
+  top: 92%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background-buttons-arrows);
+  border: 1px solid var(--color-border-buttons-arrows);
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 100;
+  transition: 200ms;
+}
+
+.carousel-arrows.swiper-button-disabled{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.carousel-button-prev{
+  left: 42%;
+}
+
+.carousel-button-next{
+  right: 42%;
+}
+
+.carousel-arrows svg{
+  width: 25px;
+  height: 25px;
+  fill: var(--color-icon-arrow);
+}
+
+.swiper-pagination-bullet-active{
+  color: var(--swiper-pagination-color);
+}
+
+.swiper-pagination-bullet{
+  color: var(--color-bullet-pagination);
 }
 
 .contact{
-  background: #fbfbfb;
-  padding: 5rem 0 7rem;
+  padding: 7rem 0;
   font-family: var(--font-primary);
 }
 
 .contact__heading{
   position: relative;
   text-align: center;
-  color: #000;
+  color: var(--color-heading);
   font-size: 2.15rem;
   font-weight: 500;
   margin: 0 0 3rem;
@@ -740,9 +663,9 @@ header nav .navlinks .btn__contact__menu{
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 4px);
-  width: 5%;
+  width: 80px;
   height: 2px;
-  background: #000;
+  background: var(--color-heading-border);
 }
 
 .contact .contact__wrapper{
@@ -751,7 +674,7 @@ header nav .navlinks .btn__contact__menu{
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  max-width: 55rem;
+  max-width: 50rem;
   margin: auto;
   padding: 1rem;
 }
@@ -763,15 +686,36 @@ header nav .navlinks .btn__contact__menu{
   text-align: center;
   border-radius: 5px;
   transition: 300ms ease-in-out;
-}
 
+  &:hover svg{
+    color: #fff;
+  }
+
+  &:hover .email{
+    background: var(--color-email-contact);
+  }
+
+  &:hover .whatsapp{
+    background: #00bb2d;
+  }
+
+  &:hover .linkedin{
+    background: #0a66c2;
+  }
+
+  &:hover .github{
+    background: #171515;
+  }
+}
 
 .contact__card .contact__card__icon{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
+  background: var(--background-icons-contact);
+  box-shadow: rgba(0, 0, 0, 0.040) 0 6px 24px 0, rgba(0, 0, 0, 0.15) 0 0 0 1px;
   border-radius: 50px;
   margin: auto;
   margin-bottom: 8px;
@@ -780,13 +724,9 @@ header nav .navlinks .btn__contact__menu{
 }
 
 .contact__card__icon svg{
-  width: 45px;
-  height: 45px;
-  color: #252525;
-}
-
-.contact__card:hover svg{
-  color: #fff;
+  width: 35px;
+  height: 35px;
+  color: var(--color-icons-contacts);
 }
 
 .email-card{
@@ -795,54 +735,33 @@ header nav .navlinks .btn__contact__menu{
 
 .email{
   background: transparent;
-  border: 2px solid #1e3ca8;
   transition: 400ms ease;
-}
 
-.email.active{
-  background: #1e3ca8;
-}
+  &.active{
+    background: var(--color-email-contact);
+  }
 
-.email.active svg{
-  color: #fff;
-}
-
-.contact__card:hover .email{
-  background: #1e3ca8;
+  &.active svg{
+    color: #fff;
+  }
 }
 
 .whatsapp{
-  background: transparent;
-  border: 2px solid #00bb2d;
   transition: 400ms ease;
-}
-
-.contact__card:hover .whatsapp{
-  background: #00bb2d;
 }
 
 .linkedin{
   background: transparent;
-  border: 2px solid #0a66c2;
   transition: 400ms ease;
-}
-
-.contact__card:hover .linkedin{
-  background: #0a66c2;
 }
 
 .github{
   background: transparent;
-  border: 2px solid #171515;
   transition: 400ms ease;
 }
 
-.contact__card:hover .github{
-  background: #171515;
-}
-
 .contact__card .contact__card__title{
-  color: #101010;
+  color: var(--color-title-contact);
   font-size: 1.28rem;
   font-weight: 600;
   position: relative;
@@ -880,10 +799,10 @@ footer p {
   transition: 400ms ease;
   cursor: pointer;
   z-index: 1;
-}
 
-.topo:hover{
-  background: var(--background-topo-hover);
+  &:hover{
+    background: var(--background-topo-hover);
+  }
 }
 
 .topo svg{
