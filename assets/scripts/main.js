@@ -142,8 +142,8 @@ ScrollReveal().reveal('.about-content p', { delay: 500, origin: 'top' });
 ScrollReveal().reveal('.skills__title', { delay: 400, origin: 'bottom' });
 ScrollReveal().reveal('.skill', { interval: 300, scale: 0.85 });
 
-ScrollReveal().reveal('.box__text .heading', { delay: 400, origin: 'bottom' });
-ScrollReveal().reveal('.swiper-pagination', { delay: 800, scale: .75 });
+ScrollReveal().reveal('.box__text .heading', { delay: 200, origin: 'bottom' });
+ScrollReveal().reveal('.carousel-projects', { delay: 400, origin: 'bottom' });
 
 ScrollReveal().reveal('.contact__heading', { delay: 300, origin: 'bottom' });
 ScrollReveal().reveal('.contact__card', { interval: 250, origin: 'top' });
