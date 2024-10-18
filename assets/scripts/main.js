@@ -124,32 +124,9 @@ closeModal.addEventListener('click', () => {
     contactCardEmailIcon.classList.remove('active')
 });
 
-ScrollReveal({
-    distance: '60px',
-    duration: 1500,
-    delay: 400
-});
-
-ScrollReveal().reveal('.main-content .socials a', { delay: 2000, origin: 'bottom' });
-ScrollReveal().reveal('.main-content h2', { delay: 1500, origin: 'bottom' });
-ScrollReveal().reveal('.main-content h4', { delay: 1000, origin: 'bottom' });
-ScrollReveal().reveal('.main-content .buttons', { delay: 500, origin: 'bottom' });
-ScrollReveal().reveal('.main .imageBox', { delay: 250, origin: 'right' });
-
-ScrollReveal().reveal('.about-content h2', { delay: 300, origin: 'bottom' });
-ScrollReveal().reveal('.about-content p', { delay: 500, origin: 'top' });
-
-ScrollReveal().reveal('.skills__title', { delay: 400, origin: 'bottom' });
-ScrollReveal().reveal('.skill', { interval: 300, scale: 0.85 });
-
-ScrollReveal().reveal('.box__text .heading', { delay: 200, origin: 'bottom' });
-ScrollReveal().reveal('.carousel-projects', { delay: 400, origin: 'bottom' });
-
-ScrollReveal().reveal('.contact__heading', { delay: 300, origin: 'bottom' });
-ScrollReveal().reveal('.contact__card', { interval: 250, origin: 'top' });
-
 var carousel = new Swiper('.carousel-projects', {
     slidesPerView: 3,
+    spaceBetween: 20,
     navigation: {
         prevEl: '.carousel-button-prev',
         nextEl: '.carousel-button-next',
@@ -173,3 +150,27 @@ var carousel = new Swiper('.carousel-projects', {
         },
       },
 })
+
+ScrollReveal({
+    distance: '60px',
+    duration: 1500,
+    delay: 400
+});
+
+ScrollReveal().reveal('.main-content .socials a', { delay: 2000, origin: 'bottom' });
+ScrollReveal().reveal('.main-content h2', { delay: 1500, origin: 'bottom' });
+ScrollReveal().reveal('.main-content h4', { delay: 1000, origin: 'bottom' });
+ScrollReveal().reveal('.main-content .buttons', { delay: 500, origin: 'bottom' });
+ScrollReveal().reveal('.main .imageBox', { delay: 250, origin: 'right' });
+
+ScrollReveal().reveal('.about-content h2', { delay: 300, origin: 'bottom' });
+ScrollReveal().reveal('.about-content p', { delay: 500, origin: 'top' });
+
+ScrollReveal().reveal('.skills__title', { delay: 400, origin: 'bottom' });
+ScrollReveal().reveal('.skill', { interval: 300, scale: 0.85 });
+
+ScrollReveal().reveal('.box__text .heading', { delay: 200, origin: 'bottom' });
+ScrollReveal().reveal('.carousel-projects', { delay: 400, origin: 'bottom' });
+
+ScrollReveal().reveal('.contact__heading', { delay: 300, origin: 'bottom' });
+ScrollReveal().reveal('.contact__card', { interval: 250, origin: 'top' });
