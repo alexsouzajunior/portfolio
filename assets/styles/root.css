@@ -49,6 +49,7 @@
     --color-border-heading: #000;
     --background-cards-projects: #fff;
     --shadow-card: rgba(223, 223, 223, 0.1) 0 6px 12px -2px, rgba(0, 0, 0, 0.40) 0 3px 7px -3px;
+    --color-icons-projects: #000;
     --color-title-card: #000;
     --color-paragraph-card: #454545;
     --background-button-card: #20639b;
@@ -132,6 +133,7 @@ body.darkmode{
   --color-title-card: rgba(255, 255, 255, 0.9);
   --background-cards-projects: #191919;
   --shadow-card: rgba(0, 0, 0, 0.253) 0 1px 3px 0, rgba(77, 77, 77, 0.488) 0 0 0 1px;
+  --color-icons-projects: rgba(255, 255, 255, 0.9);
   --color-paragraph-card: #bebebe;
   --color-text-button-card: #fff;
   --background-button-border: rgba(255, 255, 255, 0.9);

@@ -1,19 +1,5 @@
 /* == NAVBAR & MENU == */
 
-/* @media screen and (max-width: 1024px) {
-  header nav .navlinks{
-    flex: auto;
-    flex-grow: 2;
-    flex-basis: 10%;
-  }
-} */
-/* 
-@media screen and (max-width: 960px) {
-  header nav .navlinks{
-    flex-basis: 20%;
-  }
-} */
-
 @media screen and (max-width: 600px) {
   header {
     padding: 15px 20px;
@@ -267,9 +253,10 @@
 
 /* == PROJETOS == */
 
-@media screen and (max-width: 680px) {
-  .carousel-arrows{
-    display: none;
+@media screen and (max-width: 325px) {
+  .project__card .box{
+    justify-content: center;
+    flex-direction: column;
   }
 }
 

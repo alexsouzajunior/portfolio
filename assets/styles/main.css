@@ -486,6 +486,26 @@ header nav .navlinks .btn__contact__list{
   border-radius: 50px;
 }
 
+.carousel-projects{
+  width: 100%;
+  height: 480px;
+  max-width: 1200px;
+}
+
+.swiper .swiper-slide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper .swiper-slide .project__card{
+  width: 350px;
+  background: var(--background-cards-projects);
+  box-shadow: var(--shadow-card);
+  border-radius: 6px;
+  transition: .35s;
+}
+
 .project__image{
   width: 100%;
   height: auto;
@@ -504,37 +524,45 @@ header nav .navlinks .btn__contact__list{
   scale: 1.1;
 }
 
+.project__card .box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding: 0 10px;
+  padding-top: 10px;
+}
+
+.box .title__card{
+  color: var(--color-title-card);
+  font-family: var(--font-primary);
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.project__card .icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+.icons svg{
+  width: 24px;
+  height: 24px;
+  color: var(--color-icons-projects);
+}
+
 .project__card .project__card__content{
   padding: 1%;
-  line-height: 1.5;
   font-family: var(--font-primary);
   text-align: center;
 }
 
-.project__card__content .title__card{
-  position: relative;
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--color-title-card);
-}
-
-.project__card .title__card::after{
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 4px);
-  background: #0199da;
-  width: 10%;
-  height: 2px;
-  transition: 400ms ease-in-out;
-}
-
-.project__card:hover .title__card::after{
-  width: 15%;
-}
-
 .project__card__content .paragraph__card{
+  line-height: 1.5;
   margin-top: 10px;
   font-size: .95rem;
   color: var(--color-paragraph-card);
@@ -579,30 +607,20 @@ header nav .navlinks .btn__contact__list{
   transition: 400ms ease-in-out;
 }
 
-.carousel-projects{
-  width: 100%;
-  height: 480px;
-  max-width: 1200px;
-}
-
-.swiper .swiper-slide{
+.carousel-arrows-container{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
   display: flex;
-  justify-content: center;
   align-items: center;
-}
-
-.swiper .swiper-slide .project__card{
-  width: 350px;
-  background: var(--background-cards-projects);
-  box-shadow: var(--shadow-card);
-  border-radius: 6px;
-  transition: .35s;
+  width: 100px;
+  z-index: 100;
 }
 
 .carousel-arrows{
-  display: flex;
-  position: absolute;
-  top: 92%;
+  position: relative;
+  top: 40%;
   width: 38px;
   height: 38px;
   display: flex;
@@ -612,21 +630,20 @@ header nav .navlinks .btn__contact__list{
   border: 1px solid var(--color-border-buttons-arrows);
   border-radius: 50px;
   cursor: pointer;
-  z-index: 100;
   transition: 200ms;
 }
 
 .carousel-arrows.swiper-button-disabled{
-  opacity: 0;
-  visibility: hidden;
+  opacity: .35;
+  cursor: no-drop;
 }
 
 .carousel-button-prev{
-  left: 42%;
+  left: -50%;
 }
 
 .carousel-button-next{
-  right: 42%;
+  right: -70%;
 }
 
 .carousel-arrows svg{

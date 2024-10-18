@@ -160,9 +160,8 @@ var carousel = new Swiper('.carousel-projects', {
     },
 
     breakpoints: {
-        240: {
-          slidesPerView: 1,
-          spaceBetween: 20,
+        0: {
+          slidesPerView: 1
         },
         680: {
           slidesPerView: 2,
